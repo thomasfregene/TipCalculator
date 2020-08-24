@@ -8,13 +8,13 @@
     <title>Quick Tip</title>
 </head>
 <body>
-    <main>
+    <main id="container">
         <h1>Quick Tip</h1>
 
         <section>
             <div class="bill">
                 <label for="yourBill">Bill</label>
-                <input type="number" placeholder="Your bill" id="yourBill">
+                <input type="number" placeholder="Your bill" id="yourBill" >
             </div>
             <div>
                 <div class="space-between">
@@ -52,5 +52,17 @@
             </div>
         </section>
     </main>
+    <script>
+        function update(){
+            let bill = document.getElementById("yourBill").value;
+            let tipPercent = document.getElementById("tipInput").value;
+            let split = document.getElementById("splitInput").value;
+            console.log({bill, tipPercent, split})
+        }
+        //the update function targeting the input elements of the html
+        let container = document.getElementById('container');
+        container.addEventListener("input", update)
+    </script>
+
 </body>
 </html>
