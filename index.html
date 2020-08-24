@@ -54,10 +54,15 @@
     </main>
     <script>
         function update(){
-            let bill = document.getElementById("yourBill").value;
+            //type conversion
+            let bill = Number(document.getElementById("yourBill").value);
             let tipPercent = document.getElementById("tipInput").value;
             let split = document.getElementById("splitInput").value;
-            console.log({bill, tipPercent, split})
+            
+            let tipValue = bill * (tipPercent/100);
+            let tipEach = tipValue / split;
+            let newBillEach = (bill + tipValue) / split
+            console.log(newBillEach);
         }
         //the update function targeting the input elements of the html
         let container = document.getElementById('container');
