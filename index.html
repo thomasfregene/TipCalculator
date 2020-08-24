@@ -53,6 +53,10 @@
         </section>
     </main>
     <script>
+        function formatMoney(value){
+            value = value.toFixed(2);
+            return "$ " + value
+        }
         function update(){
             //type conversion
             let bill = Number(document.getElementById("yourBill").value);
