@@ -38,7 +38,7 @@
             <div>
                 <div class="space-between">
                     <label for="splitInput">Split</label>
-                    <span id="splitValue">1 person</span>
+                    <span id="splitValue"></span>
                 </div>
                 <input type="range" min="1" max="10" value="1" id="splitInput" class="range">
             </div>
@@ -65,7 +65,8 @@
             
             document.getElementById("tipPercent").innerHTML = tipPercent + "%";
             document.getElementById("tipValue").innerHTML = tipValue;
-            document.getElementById("totalWithTip").innerHTML = bill + tipValue
+            document.getElementById("totalWithTip").innerHTML = bill + tipValue;
+            document.getElementById("splitValue").innerHTML = split;
         }
         //the update function targeting the input elements of the html
         let container = document.getElementById('container');
