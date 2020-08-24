@@ -53,6 +53,10 @@
         </section>
     </main>
     <script>
+        function formatSplit(value){
+            if(value === "1") return value + " person"
+            return value + " people"
+        }
         function formatMoney(value){
             value = value.toFixed(2);
             return "$ " + value
