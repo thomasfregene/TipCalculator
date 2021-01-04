@@ -15,7 +15,9 @@
 
         <div class="whatsapp">
             <a href="https://api.whatsapp.com/send?phone=+2438163348947" target="_blank">
-                <h5><i class="fa fa-whatsapp fa-3x " aria-hidden="true"></i></h5>
+                <h5><i class="fab fa-whatsapp fa-3x" aria-hidden="true"></i></h5>
+                <!-- <i class="fa fa-whatsapp fa-3x " aria-hidden="true"></i> -->
+                
             </a>
         </div>
 
@@ -61,6 +63,30 @@
         </section>
         <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
         <div class="elfsight-app-b3e335f1-3450-4719-b13e-cf227c62c962"></div> -->
+
+        <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v9.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="103760925006368">
+      </div>
     </main>
     <script>
         function formatSplit(value) {
